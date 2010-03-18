@@ -20,6 +20,10 @@ You can also supply optional parameters via an options hash which will be automa
 
 Each API call fires a custom event using the jQuery custom event library that packages the result data object with the event. This makes it easy for multiple modules or components in your system to use the result of a single API call. 
 
+	$("body").bind("bc.foundVideoById", function(e, resultData) {
+		
+	})
+
 ## It's a Singleton
 
 There are people who argue against the Javascript module pattern used within noting (correctly) that it is less performant than using Prototypal instantiation. However, I believe in using the right tool for the job and I believe an API access module is correctly implemented as a Singleton service. If you disagree; feel free to fork! I won't be offended.
