@@ -47,11 +47,11 @@ BrightcoveHtmlModules.api = (function($){
     }
 
 	// Retrieve a playlist by ID
-	function findPlaylistById(playlistId, options) {
-		var request = apiBase + apiMethods.findPlaylistById + "&playlist_id=" + playlistId;
-		request = prepareRequest(request, options);
-		doJsonpApiRequest(request, "handleFindPlaylistById");
-	}
+    function findPlaylistById(playlistId, options) {
+        var request = apiBase + apiMethods.findPlaylistById + "&playlist_id=" + playlistId;
+        request = prepareRequest(request, options);
+        doJsonpApiRequest(request, "handleFindPlaylistById");
+    }
     
     /***** API ACCESS HELPERS ******/
     
@@ -105,9 +105,9 @@ BrightcoveHtmlModules.api = (function($){
         $('body').trigger("bc.foundVideoById", [response]);
     }
 
-	function handleFindPlaylistById(response) {
-		$('body').trigger("bc.foundPlaylistById", [response]);
-	}
+    function handleFindPlaylistById(response) {
+        $('body').trigger("bc.foundPlaylistById", [response]);
+    }
     
     /***** GETTERS & SETTERS *****/
     
@@ -125,9 +125,9 @@ BrightcoveHtmlModules.api = (function($){
         getApiKey:              getApiKey,
         setApiKey:              setApiKey,
         findVideoById:          findVideoById,
-		findPlaylistById: 		findPlaylistById,
+        findPlaylistById: 		findPlaylistById,
         handleFindVideoById:    handleFindVideoById,
-		handleFindPlaylistById: handleFindPlaylistById
+        handleFindPlaylistById: handleFindPlaylistById
     }
 
 })(jQuery);
